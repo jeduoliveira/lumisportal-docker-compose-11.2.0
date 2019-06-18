@@ -101,7 +101,6 @@ volumes:
   mysql-data:
   elastic-data:
   lumis-analysis:
-  lumis_config:
   lumis_data:
   lumis_shared: 
   lumis_htdocs:
