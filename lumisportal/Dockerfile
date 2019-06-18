@@ -42,6 +42,8 @@ WORKDIR $CATALINA_HOME
 
 COPY ./tomcat/ .
 
+ADD elasticsearch/config/lumis-analysis $ES_HOME/config/lumis-analysis 
+
 RUN groupadd elasticsearch \
     && useradd -s /bin/nologin -g elasticsearch -d $ES_HOME elasticsearch \
     && mkdir -p $LUMIS_HOME/lumisdata/shared/data/elasticsearch \
@@ -52,7 +54,11 @@ RUN groupadd elasticsearch \
     && cp -r $LUMIS_HOME/www/lumis* $LUMIS_HTDOCS \
     && find . -name "*.jsp" -exec rm -rf {} \; \
     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
-    && echo $TZ > /etc/timezone 
+    && echo $TZ > /etc/timezone \
+    && chown -R elasticsearch:root $ES_HOME/config/lumis-analysis \
+    && chmod -R 755 $ES_HOME/config/lumis-analysis 
+
+
 
 VOLUME $LUMIS_HOME/lumisdata/data
 VOLUME $LUMIS_HOME/lumisdata/shared
