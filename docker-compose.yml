@@ -21,7 +21,7 @@ services:
     
   elasticsearch:    
     #build: ./elasticsearch
-    image: jeduoliveira/lumisportal-elasticsearch-stack:6.6.2    
+    image: jeduoliveira/lumisportal-stack-elasticsearch:6.6.2    
     environment: 
       - cluster.name=lumisportal
       - bootstrap.memory_lock=true
@@ -83,7 +83,8 @@ services:
       retries: 50
         
   apache:
-    image: httpd
+    #build: ./httpd
+    image: jeduoliveira/lumisportal-stack-httpd        
     depends_on: 
       - lumisportal
     links:
