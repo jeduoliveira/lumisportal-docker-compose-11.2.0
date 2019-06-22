@@ -20,6 +20,6 @@ Segue o repositório onde encontra-se o dockerfile e todos os arquivos necessár
 Dependências
 ------------
 
-MySQL
-Elasticsearch [github](https://github.com/jeduoliveira/lumisportal-stack-elasticsearch)
-Httpd [github](https://github.com/jeduoliveira/lumisportal-stack-httpd)
+- MySQL
+- Elasticsearch [github](https://github.com/jeduoliveira/lumisportal-stack-elasticsearch)
+- Httpd [github](https://github.com/jeduoliveira/lumisportal-stack-httpd)
