@@ -1,3 +1,7 @@
 FROM elasticsearch:6.6.2
-ENV ES_HOME /usr/share/elasticsearch
-RUN $ES_HOME/bin/elasticsearch-plugin install --batch analysis-icu  
+
+LABEL maintainer="jeduoliveira81@gmail.com"
+LABEL version="1.0"
+
+ENV elastic_home /usr/share/elasticsearch
+RUN ${elastic_home}/bin/elasticsearch-plugin install --batch analysis-icu  

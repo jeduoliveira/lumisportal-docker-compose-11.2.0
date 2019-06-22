@@ -1,6 +1,9 @@
 FROM httpd:alpine
 
-ENV HTTPD_HOME /usr/local/apache2
+LABEL maintainer="jeduoliveira81@gmail.com"
+LABEL version="1.0"
+
+ENV apache_home /usr/local/apache2
 
 RUN sed -i \
         -e 's/^#\(Include .*httpd-vhosts.conf\)/\1/' \
@@ -11,4 +14,4 @@ RUN sed -i \
         -e 's/^#\(LoadModule .*mod_deflate.so\)/\1/' \
         conf/httpd.conf
 
-ADD ./conf $HTTPD_HOME/conf/
+COPY ./conf ${apache_home}/conf/
