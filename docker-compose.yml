@@ -18,7 +18,8 @@ services:
       test: "/etc/init.d/mysql status"
       interval: 1s
       retries: 120
-    
+  
+  #https://github.com/jeduoliveira/lumisportal-stack-elasticsearch  
   elasticsearch:        
     image: jeduoliveira/lumisportal-stack-elasticsearch:6.6.2    
     environment: 
@@ -44,6 +45,7 @@ services:
       timeout: 10s
       retries: 5
 
+  #https://github.com/jeduoliveira/lumisportal-stack
   lumisportal:
     image: jeduoliveira/lumisportal-stack:11.2.0.190404        
     environment:
@@ -80,6 +82,7 @@ services:
       timeout: 10s
       retries: 50
         
+  #https://github.com/jeduoliveira/lumisportal-stack-httpd
   apache:
     image: jeduoliveira/lumisportal-stack-httpd        
     depends_on: 
