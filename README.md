@@ -1,7 +1,7 @@
 Stack docker-compose do lumisxp 11.2.0
 ================================
 
-|  [![travis](https://travis-ci.org/jeduoliveira/lumisportal-docker-compose-11.2.0.svg?branch=master)]()
+[![travis](https://travis-ci.org/jeduoliveira/lumisportal-docker-compose-11.2.0.svg?branch=master)]()
 
 O que é?
 -----------------------
