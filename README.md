@@ -1,6 +1,8 @@
 Stack docker-compose do lumisxp 11.2.0
 ================================
 
+|  [![travis](https://travis-ci.org/jeduoliveira/lumisportal-docker-compose-11.2.0.svg?branch=master)]()
+
 O que é?
 -----------------------
 O LumisXP (Lumis Experience Platform) é uma plataforma para a criação e gestão de soluções para a experiência digital do cliente.
