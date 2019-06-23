@@ -15,12 +15,8 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 script:
-  - |
-    (
-      set -Eeuo pipefail
-      set -x
-      make run
-    )
+  - make run
+  - make ps
 after_script:
   - docker images
 
